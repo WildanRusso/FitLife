@@ -1,6 +1,6 @@
-from random import randint
-
 import pygame
+
+from random import randint
 
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
@@ -215,4 +215,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

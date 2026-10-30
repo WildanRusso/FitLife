@@ -13,11 +13,11 @@ user_height = float(input("Введите ваш рост в метрах: "))
 bmi = user_weight / (user_height ** 2)
 
 # Подсчёт воды: вес * 30 мл
-water_needed = user_weight * 30
+water_needed = user_weight * 0.03
 
 # 4. Вывод результата
 print(f"Привет, {user_name}!")
 print(f"Ваш возраст: {user_age}")
 print(f"Ваш индекс массы тела (ИМТ): {bmi:.1f}")
-print(f"Рекомендуемая норма воды: {water_needed:.0f} мл в день")
+print(f"Рекомендуемая норма воды: {water_needed:.3f} л в день")
 print("Расчет окончен. Будьте здоровы!")

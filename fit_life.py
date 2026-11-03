@@ -1,9 +1,7 @@
-
 # Проект FitLife - MVP версия 1.0
-
-
 # Функция для ввода целых чисел
 def get_int(prompt):
+    """Запрашивает положительное целое число."""
     while True:
         try:
             value = int(input(prompt))
@@ -17,6 +15,7 @@ def get_int(prompt):
 
 # Функция для ввода дробных чисел
 def get_float(prompt):
+    """Запрашивает положительное дробное число."""
     while True:
         try:
             value = float(input(prompt).replace(",", "."))
@@ -53,3 +52,4 @@ print(f"Ваш возраст: {user_age}")
 print(f"Ваш индекс массы тела (ИМТ): {bmi:.1f}")
 print(f"Рекомендуемая норма воды: {water_needed:.3f} л в день")
 print("Расчёт окончен. Будьте здоровы!")
+

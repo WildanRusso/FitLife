@@ -1,44 +1,45 @@
 # Проект FitLife - MVP версия 1.0
 
-# Функция для ввода целых чисел
-def get_int(prompt):
-    """Запрашивает положительное целое число."""
-    while True:
-        try:
-            value = int(input(prompt))
-            if value <= 0:
-                print("Ошибка! Введите число больше нуля.")
-                continue
-            return value
-        except ValueError:
-            print("Ошибка! Введите целое число, например: 20.")
-
-
-# Функция для ввода дробных чисел
-def get_float(prompt):
-    """Запрашивает положительное дробное число."""
-    while True:
-        try:
-            value = float(input(prompt).replace(",", "."))
-            if value <= 0:
-                print("Ошибка! Введите число больше нуля.")
-                continue
-            return value
-        except ValueError:
-            print("Ошибка! Введите число, например: 75 или 1.75.")
-
-
 # 1. Знакомство
 user_name = input("Введите ваше имя: ")
-user_age = get_int("Введите ваш возраст: ")
+
+while True:
+    try:
+        user_age = int(input("Введите ваш возраст: "))
+        if user_age <= 0:
+            print("Ошибка! Введите возраст больше нуля.")
+            continue
+        break
+    except ValueError:
+        print("Ошибка! Введите целое число, например: 20.")
+
 
 # 2. Сбор данных
-user_weight = get_float(
-    "Введите ваш вес в килограммах: "
-)
-user_height = get_float(
-    "Введите ваш рост в метрах (например, 1.75): "
-)
+while True:
+    try:
+        user_weight = float(
+            input("Введите ваш вес в килограммах: ").replace(",", ".")
+        )
+        if user_weight <= 0:
+            print("Ошибка! Введите вес больше нуля.")
+            continue
+        break
+    except ValueError:
+        print("Ошибка! Введите число, например: 75.")
+
+
+while True:
+    try:
+        user_height = float(
+            input("Введите ваш рост в метрах: ").replace(",", ".")
+        )
+        if user_height <= 0:
+            print("Ошибка! Введите рост больше нуля.")
+            continue
+        break
+    except ValueError:
+        print("Ошибка! Введите число, например: 1.75.")
+
 
 # 3. Логика расчётов (арифметика)
 # Формула ИМТ: вес разделить на рост в квадрате
